@@ -1,0 +1,24 @@
+# For standard Spring Boot parameters see:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+server:
+  port: 8081
+  servlet:
+    session:
+      timeout: 1000
+
+
+# TODO: REVIEW IF YOUR APPLICATION NEEDS TRACE THIS PARAMETER OR MORE (this is an example with installationNumber)      
+# Spring Cloud Sleuth tracing extra fields to propagate (HTTP/Rest and messaging)
+spring:
+  sleuth:
+    propagation-keys:
+    - installationNumber
+    
+# MDCFilter: Keys for get tracing extra fields from HTTP headers
+http:
+  headers:
+    installationNumber: installationNumber
+# MDCFilter: Keys for set tracing extra fields to the MDC context
+logging:
+  mdc:
+    installationNumber: installationNumber
