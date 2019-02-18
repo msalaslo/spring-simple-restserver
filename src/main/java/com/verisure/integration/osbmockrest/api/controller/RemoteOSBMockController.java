@@ -32,12 +32,12 @@ public class RemoteOSBMockController {
 		LOGGER.debug("OSB Mock configuration change response received, BODY:" + body);
 	}
 
-	@PostMapping(produces = "application/json", value = "/withdto")
-	@ResponseBody
-	@ApiOperation(value = "view the list of ALL application items", response = ConfigurationChangeResponseDTO.class)
-	public void postConfigurationChangeResponse(@RequestHeader HttpHeaders headers,
-			@RequestBody ConfigurationChangeResponseDTO configurationChange) {
-		LOGGER.debug("OSB Mock configuration change response received, HEADERS:" + headers);
-		LOGGER.debug("OSB Mock configuration change response received:" + configurationChange);
-	}
+//	@PostMapping(produces = "application/json", value = "/withdto")
+//	@ResponseBody
+//	@ApiOperation(value = "view the list of ALL application items", response = ConfigurationChangeResponseDTO.class)
+//	public void postConfigurationChangeResponse(@RequestHeader HttpHeaders headers,
+//			@RequestBody ConfigurationChangeResponseDTO configurationChange) {
+//		LOGGER.debug("OSB Mock configuration change response received, HEADERS:" + headers);
+//		LOGGER.debug("OSB Mock configuration change response received:" + configurationChange);
+//	}
 }
