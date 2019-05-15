@@ -7,18 +7,12 @@ server:
       timeout: 1000
 
 
-# TODO: REVIEW IF YOUR APPLICATION NEEDS TRACE THIS PARAMETER OR MORE (this is an example with installationNumber)      
-# Spring Cloud Sleuth tracing extra fields to propagate (HTTP/Rest and messaging)
 spring:
+  # Spring Cloud Sleuth tracing extra fields to propagate (HTTP/Rest and messaging)
   sleuth:
     propagation-keys:
-    - installationNumber
-    
-# MDCFilter: Keys for get tracing extra fields from HTTP headers
-http:
-  headers:
-    installationNumber: installationNumber
-# MDCFilter: Keys for set tracing extra fields to the MDC context
-logging:
-  mdc:
-    installationNumber: installationNumber
+    - installationnumber
+    log:
+      slf4j:
+        whitelisted-mdc-keys:  
+        - installationnumber
