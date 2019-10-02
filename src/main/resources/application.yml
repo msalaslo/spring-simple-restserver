@@ -8,7 +8,7 @@ server:
 
 
 spring:
-  # Spring Cloud Sleuth tracing extra fields to propagate (HTTP/Rest and messaging)
+# Spring Cloud Sleuth tracing extra fields to propagate (HTTP/Rest and messaging). Don't capitalize the keys
   sleuth:
     propagation-keys:
     - installationnumber
