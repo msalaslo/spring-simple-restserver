@@ -26,9 +26,11 @@ import lombok.extern.slf4j.Slf4j;
 public class RemoteOSBMockController {
 
 	@PostMapping(consumes = "application/json")
-	public void postConfigurationChangeResponse(@RequestHeader HttpHeaders headers, @RequestBody String body) {
+	public HelloDTO postConfigurationChangeResponse(@RequestHeader HttpHeaders headers, @RequestBody String body) {
 		LOGGER.debug("OSB Mock configuration change response received, HEADERS:" + headers);
 		LOGGER.debug("OSB Mock configuration change response received, BODY:" + body);
+		HelloDTO hello = HelloDTO.builder().msg("Hello").build();
+		return hello;
 	}
 	
 	@GetMapping()
