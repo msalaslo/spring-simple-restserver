@@ -16,3 +16,6 @@ spring:
       slf4j:
         whitelisted-mdc-keys:  
         - installationnumber
+logback:
+  access:
+    enabled: true

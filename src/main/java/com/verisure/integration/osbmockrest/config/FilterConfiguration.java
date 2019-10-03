@@ -1,26 +1,20 @@
 package com.verisure.integration.osbmockrest.config;
-import java.util.Collections;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import ch.qos.logback.access.servlet.TeeFilter;
+import com.verisure.integration.osbmockrest.api.filter.RequestResponseLoggingFilter;
 
 @Configuration
 public class FilterConfiguration {
 
-    @Autowired
-    @Bean
-    public FilterRegistrationBean requestResponseFilter() {
-
-        final FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
-        TeeFilter filter = new TeeFilter();
-        filterRegBean.setFilter(filter);
-        filterRegBean.setUrlPatterns(Collections.singletonList("/rest/path"));
-        filterRegBean.setName("Request Response Filter");
-        filterRegBean.setAsyncSupported(Boolean.TRUE);
-        return filterRegBean;
-    }
+	@Bean
+	public FilterRegistrationBean<RequestResponseLoggingFilter> loggingFilter() {
+		FilterRegistrationBean<RequestResponseLoggingFilter> filterRegBean = new FilterRegistrationBean<>();
+		filterRegBean.setFilter(new RequestResponseLoggingFilter());
+		filterRegBean.addUrlPatterns("/*");
+		filterRegBean.setName("RequestResponseLoggingFilter");
+		return filterRegBean;
+	}
 }
