@@ -5,26 +5,21 @@
 	<springProperty scope="context" name="springAppName"
 		source="spring.application.name" />
 
-	<appender name="CONSOLE"
-		class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<Pattern>
-				%d{dd-MM-yyyy HH:mm:ss} %highlight(%-5level) %-50logger{50}
-				[%boldCyan(${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{installationnumber:-})]:
-				%msg%n
-			</Pattern>
-			<charset>utf8</charset>
-		</encoder>
-		<!-- encoder>
-			<pattern>logging uri: %requestURL | status code: %statusCode | bytes:
-				%bytesSent | elapsed time: %elapsedTime | request-log:
-				%magenta(%requestContent) | response-log: %cyan(%responseContent)</pattern>
-		</encoder-->
-	</appender>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>
+                                %d{dd-MM-yyyy HH:mm:ss} %highlight(%-5level) %-50logger{50} [%boldCyan(${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{installationnumber:-})]: %msg%n
+            </Pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
 
 	<logger name="com.verisure" level="DEBUG" />
 	<logger name="com.netflix" level="INFO" />
 	<logger name="org.springframework" level="INFO" />
+		<logger name="ch.qos.logback.access" level="DEBUG" />
+	
+	
 
 	<root level="warn">
 		<appender-ref ref="CONSOLE" />
