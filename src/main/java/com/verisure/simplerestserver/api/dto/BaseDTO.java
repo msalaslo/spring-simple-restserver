@@ -1,4 +1,4 @@
-package com.verisure.integration.osbmockrest.api.dto;
+package com.verisure.simplerestserver.api.dto;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

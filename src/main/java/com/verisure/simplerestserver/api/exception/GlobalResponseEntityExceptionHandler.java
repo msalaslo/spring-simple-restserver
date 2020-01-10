@@ -1,4 +1,4 @@
-package com.verisure.integration.osbmockrest.api.exception;
+package com.verisure.simplerestserver.api.exception;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.verisure.integration.osbmockrest.api.dto.ErrorDTO;
+import com.verisure.simplerestserver.api.dto.ErrorDTO;
 
 /**
  * Generic error handling mechanism.

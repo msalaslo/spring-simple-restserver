@@ -1,11 +1,12 @@
 package com.verisure.integration.osbmockrest.launcher;
 
-import com.verisure.integration.osbmockrest.Application;
 import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.verisure.simplerestserver.Application;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Application.class)

@@ -1,4 +1,4 @@
-package com.verisure.integration.osbmockrest.api.filter;
+package com.verisure.simplerestserver.api.filter;
 
 import java.io.BufferedReader;
 import java.io.IOException;

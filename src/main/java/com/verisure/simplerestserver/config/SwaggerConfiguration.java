@@ -1,4 +1,4 @@
-package com.verisure.integration.osbmockrest.config;
+package com.verisure.simplerestserver.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

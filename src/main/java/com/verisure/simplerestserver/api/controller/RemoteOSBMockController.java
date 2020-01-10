@@ -1,4 +1,4 @@
-package com.verisure.integration.osbmockrest.api.controller;
+package com.verisure.simplerestserver.api.controller;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.verisure.integration.osbmockrest.api.dto.HelloDTO;
+import com.verisure.simplerestserver.api.dto.HelloDTO;
 
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;

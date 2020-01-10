@@ -1,4 +1,4 @@
-package com.verisure.integration.osbmockrest.api.dto;
+package com.verisure.simplerestserver.api.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,8 @@
-package com.verisure.integration.osbmockrest;
+package com.verisure.simplerestserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @SpringBootApplication
+@EnableAsync
 public class Application {
 	
     protected Application() {
