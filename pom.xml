@@ -30,7 +30,7 @@
 		<commons-lang3.version>3.7</commons-lang3.version>
 		<lombok.version>1.16.20</lombok.version>
 		<mapstruct.version>1.2.0.Final</mapstruct.version>
-		<swagger.version>2.7.0</swagger.version>
+		<swagger.version>2.10.0</swagger.version>
 		<!-- Add the rest controller list for swaggaer -->
 		<rest-locations>com.verisure.integration.osb-mock-rest.api.controller</rest-locations>
 		<spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
